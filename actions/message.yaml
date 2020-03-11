@@ -1,0 +1,12 @@
+name: greet
+pack: harold
+runner_type: "local-shell-script"
+description: Harold Bot Message!
+enabled: true
+entry_point: message.sh
+parameters:
+    text:
+        type: string
+        description: Text sent to harold's bot
+        required: true
+        position: 1

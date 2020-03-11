@@ -1,0 +1,11 @@
+ref: harold
+name: Harold
+description: Harold Stackstorm Pack.
+keywords:
+    - harold
+version: 0.0.1
+python_versions:
+  - "2"
+  - "3"
+author: Harold Team.
+email: mfaquinor@indracompany.com
