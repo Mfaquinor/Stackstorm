@@ -1,12 +1,29 @@
-name: greet
+name: message
 pack: harold
-runner_type: "local-shell-script"
-description: Harold Bot Message!
+runner_type: python-script
+description: Send a Message to Harold Bot!
 enabled: true
-entry_point: message.sh
+entry_point: message.py
 parameters:
-    text:
+    question:
         type: string
         description: Text sent to harold's bot
         required: true
+        position: 0
+    user:
+        type: string
+        description: User Identification
+        required: true
         position: 1
+    channel:
+        type: string
+        description: Chat Channel
+        required: true
+        position: 2
+        default: STACKSTORM
+    bot:
+        type: string
+        description: Bot Identification
+        required: true
+        position: 3
+        default: 5a34aff2-94fc-4776-8a10-01484120ef31
