@@ -5,7 +5,8 @@ enabled: true
 
 trigger:
     type: core.st2.webhook
-    url: "harold/message"
+    parameters:
+        url: "harold/message"
 
 action:
     ref: harold.message
