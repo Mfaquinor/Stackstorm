@@ -1,10 +1,4 @@
 import requests
-import six
-
-from six.moves.urllib.parse import urlencode
-from six.moves.urllib import parse as urlparse
-urljoin = urlparse.urljoin
-
 from st2common.runners.base_action import Action
 
 BASE_URL = 'https://harold.indrabrasil.com.br/api-chat/message'
@@ -13,9 +7,8 @@ BASE_URL = 'https://harold.indrabrasil.com.br/api-chat/message'
 class SlackAction(Action):
 
     def run(self, **kwargs):
-        return self.request(kwargs)
+        params = kwargs
 
-    def request(self, params):
         question = params['question']
         channel = params['channel']
         user = params['user']
