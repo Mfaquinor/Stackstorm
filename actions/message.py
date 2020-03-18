@@ -25,8 +25,8 @@ class SlackAction(Action):
 
         payload = {
             'question': question,
-            'user': user
-            'botId': bot
+            'user': user,
+            'botId': bot,
             'channelType': channel
         }
 
