@@ -1,0 +1,14 @@
+name: predict
+pack: harold
+description: Harold bot classifier for a webhook text message
+enabled: true
+
+trigger:
+    type: core.st2.webhook
+    url: harold/message
+
+action:
+    ref: harold.message
+    parameters:
+        question: "{{trigger.body.text}}"
+        user: "{{trigger.body.user}}"

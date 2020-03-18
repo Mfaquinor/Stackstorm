@@ -1,0 +1,13 @@
+name: receive
+pack: harold
+description: Harold bot's answer to a question
+enabled: true
+
+trigger:
+    type: core.st2.webhook
+    url: harold/response
+
+action:
+    ref: core.local
+    parameters:
+        cmd: "echo \"{{trigger.body}}\" >> ~/st2.harold.out ; sync"
