@@ -1,0 +1,14 @@
+name: historical
+pack: harold
+description: Search the user's chat history with the harold bot
+enabled: true
+
+trigger:
+    type: core.st2.webhook
+    parameters:
+        url: "harold/historical"
+
+action:
+    ref: harold.history
+    parameters:
+        userid: "{{trigger.body.id}}"

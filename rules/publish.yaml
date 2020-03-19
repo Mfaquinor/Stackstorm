@@ -1,4 +1,4 @@
-name: predict
+name: publish
 pack: harold
 description: Harold bot classifier for a webhook text message
 enabled: true
@@ -6,7 +6,7 @@ enabled: true
 trigger:
     type: core.st2.webhook
     parameters:
-        url: "harold/message"
+        url: "harold/publish"
 
 action:
     ref: harold.message

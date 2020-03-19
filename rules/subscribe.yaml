@@ -1,4 +1,4 @@
-name: receive
+name: subscribe
 pack: harold
 description: Harold bot's answer to a question
 enabled: true
@@ -6,7 +6,7 @@ enabled: true
 trigger:
     type: core.st2.webhook
     parameters:
-        url: "harold/response"
+        url: "harold/subscribe"
 
 action:
     ref: core.local
