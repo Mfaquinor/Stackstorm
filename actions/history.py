@@ -24,4 +24,6 @@ class SlackAction(Action):
             'botId': bot,
         }
 
-        return requests.post(url=BASE_URL, headers=headers, data=json.dumps(payload))
+        response = requests.post(url=BASE_URL, headers=headers, data=json.dumps(payload))
+
+        return response.json()
