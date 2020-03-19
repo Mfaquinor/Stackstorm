@@ -12,4 +12,5 @@ action:
     ref: harold.message
     parameters:
         question: "{{trigger.body.text}}"
-        user: "{{trigger.body.user}}"
+        username: "{{trigger.body.username}}"
+        userid: "{{trigger.body.id}}"

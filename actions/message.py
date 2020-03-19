@@ -10,22 +10,25 @@ class SlackAction(Action):
     def run(self, **kwargs):
         params = kwargs
 
+        username = payload['username']
         question = params['question']
         channel = params['channel']
-        user = params['user']
+        userid = params['userid']
         bot = params['bot']
 
         headers = {}
         headers['Content-Type'] = 'application/json'
 
         self.logger.info(bot)
-        self.logger.info(user)
+        self.logger.info(userid)
         self.logger.info(channel)
         self.logger.info(question)
+        self.logger.info(username)
 
         payload = {
             'question': question,
-            'user': user,
+            'user': username,
+            'userId': userid,
             'botId': bot,
             'channelType': channel
         }

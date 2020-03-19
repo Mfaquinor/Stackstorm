@@ -10,20 +10,25 @@ parameters:
         description: Text sent to harold's bot
         required: true
         position: 0
-    user:
+    username:
+        type: string
+        description: Username
+        required: true
+        position: 1
+    userid:
         type: string
         description: User Identification
         required: true
-        position: 1
+        position: 2
     channel:
         type: string
         description: Chat Channel
         required: true
-        position: 2
+        position: 3
         default: STACKSTORM
     bot:
         type: string
         description: Bot Identification
         required: true
-        position: 3
+        position: 4
         default: 01b5c74d-ebe6-450d-bd39-f52744b7e074
