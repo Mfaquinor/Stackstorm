@@ -1,0 +1,14 @@
+name: attendance
+pack: harold
+description: Trigger for response exchange by user service
+enabled: true
+
+trigger:
+    type: core.st2.webhook
+    parameters:
+        url: "harold/attendance"
+
+action:
+    ref: core.local
+    parameters:
+        cmd: "echo \"{{trigger.body}}\" >> ~/st2.attendance.out ; sync"
