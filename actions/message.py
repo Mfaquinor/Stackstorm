@@ -10,7 +10,7 @@ class SlackAction(Action):
     def run(self, **kwargs):
         params = kwargs
 
-        username = payload['username']
+        username = params['username']
         question = params['question']
         channel = params['channel']
         userid = params['userid']
