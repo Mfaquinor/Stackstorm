@@ -1,15 +1,15 @@
-name: publish
+name: controller
 pack: harold
-description: Publisher webhook de envio de mensagens para o bot do harold.
+description: Webhook para controle do responsável pelo atendimento.
 enabled: true
 
 trigger:
     type: core.st2.webhook
     parameters:
-        url: "harold/message"
+        url: "oop/controller"
 
 action:
-    ref: harold.message
+    ref: harold.service
     parameters:
         question: "{{trigger.body.text}}"
         username: "{{trigger.body.username}}"

@@ -1,0 +1,22 @@
+name: service
+pack: harold
+runner_type: python-script
+description: Seleciona um atendente ou o harold para reposnder uma mensagem
+enabled: true
+entry_point: service.py
+parameters:
+    question:
+        type: string
+        description: Texto a ser enviado ao bot
+        required: true
+        position: 0
+    username:
+        type: string
+        description: Nome do usuário
+        required: true
+        position: 1
+    userid:
+        type: string
+        description: O Id de identificação do usuário
+        required: true
+        position: 2

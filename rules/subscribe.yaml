@@ -6,7 +6,7 @@ enabled: true
 trigger:
     type: core.st2.webhook
     parameters:
-        url: "harold/subscribe"
+        url: "harold/response"
 
 action:
     ref: core.local
