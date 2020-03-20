@@ -14,7 +14,7 @@ class SlackAction(Action):
         key = 'attendance:' + userid
 
         if(status == 'True' or status == True):
-            self.action_service.set_value(name=key, value=status)
+            self.action_service.set_value(name=key, value=status, ttl=21600)
         else:
             self.action_service.delete_value(key)
 
