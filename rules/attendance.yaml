@@ -9,6 +9,7 @@ trigger:
         url: "harold/attendance"
 
 action:
-    ref: core.local
+    ref: core.attend
     parameters:
-        cmd: "echo \"{{trigger.body}}\" >> ~/st2.attendance.out ; sync"
+        userid: "{{trigger.body.userid}}"
+        status: "{{trigger.body.status}}"

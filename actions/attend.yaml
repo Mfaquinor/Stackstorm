@@ -1,0 +1,18 @@
+name: attend
+pack: harold
+runner_type: python-script
+description: Sinaliza a troca de atendimento entre um humano e o harold!
+enabled: true
+entry_point: attend.py
+parameters:
+    userid:
+        type: string
+        description: O Id de Identificação do Usuário
+        required: true
+        position: 0
+    status:
+        type: boolean
+        description: Sinaliza o Responsável pelo Atendimento do Usuário (True) - Humano, (False) - Harold
+        required: true
+        position: 1
+        default: false
