@@ -5,7 +5,7 @@ description: Seleciona um atendente ou o harold para reposnder uma mensagem
 enabled: true
 entry_point: service.py
 parameters:
-    question:
+    message:
         type: string
         description: Texto a ser enviado ao bot
         required: true
