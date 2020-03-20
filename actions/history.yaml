@@ -1,18 +1,18 @@
 name: history
 pack: harold
 runner_type: python-script
-description: Fetch a message history from the harold bot!
+description: Busca o histórico de mensagens de um usuário com o bot do harold.
 enabled: true
 entry_point: history.py
 parameters:
     userid:
         type: string
-        description: User Identification
+        description: O Id de identificação do usuário
         required: true
         position: 0
     bot:
         type: string
-        description: Bot Identification
+        description: O Id de identificação do bot
         required: true
         position: 1
         default: 01b5c74d-ebe6-450d-bd39-f52744b7e074

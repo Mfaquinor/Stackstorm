@@ -1,34 +1,34 @@
 name: message
 pack: harold
 runner_type: python-script
-description: Send a Message to Harold Bot!
+description: Envie uma mensagem para o bot do harold.
 enabled: true
 entry_point: message.py
 parameters:
     question:
         type: string
-        description: Text sent to harold's bot
+        description: Texto a ser enviado ao bot
         required: true
         position: 0
     username:
         type: string
-        description: Username
+        description: Nome do usuário
         required: true
         position: 1
     userid:
         type: string
-        description: User Identification
+        description: O Id de identificação do usuário
         required: true
         position: 2
     channel:
         type: string
-        description: Chat Channel
+        description: O canal de comunicação - STACKSTORM
         required: true
         position: 3
         default: STACKSTORM
     bot:
         type: string
-        description: Bot Identification
+        description: O Id de identificação do bot
         required: true
         position: 4
         default: 01b5c74d-ebe6-450d-bd39-f52744b7e074

@@ -1,6 +1,6 @@
 name: subscribe
 pack: harold
-description: Harold bot's answer to a question
+description: Subscriber webhook para receber as respostas de mensagens do harold.
 enabled: true
 
 trigger:

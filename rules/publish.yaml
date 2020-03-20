@@ -1,6 +1,6 @@
 name: publish
 pack: harold
-description: Harold bot classifier for a webhook text message
+description: Publisher webhook de envio de mensagens para o bot do harold.
 enabled: true
 
 trigger:
@@ -13,4 +13,4 @@ action:
     parameters:
         question: "{{trigger.body.text}}"
         username: "{{trigger.body.username}}"
-        userid: "{{trigger.body.id}}"
+        userid: "{{trigger.body.userid}}"

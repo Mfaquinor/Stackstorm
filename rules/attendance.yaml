@@ -1,6 +1,6 @@
 name: attendance
 pack: harold
-description: Trigger for response exchange by user service
+description: Gatilho Responsável Pela Troca do Responsável do Atendimento do Usuário entre o Harold e um Humano
 enabled: true
 
 trigger:
