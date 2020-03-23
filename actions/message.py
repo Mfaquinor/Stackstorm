@@ -11,7 +11,7 @@ class SlackAction(Action):
         params = kwargs
 
         username = params['username']
-        question = params['question']
+        message = params['message']
         channel = params['channel']
         userid = params['userid']
         bot = params['bot']
@@ -22,11 +22,11 @@ class SlackAction(Action):
         self.logger.info(bot)
         self.logger.info(userid)
         self.logger.info(channel)
-        self.logger.info(question)
+        self.logger.info(message)
         self.logger.info(username)
 
         payload = {
-            'question': question,
+            'question': message,
             'user': username,
             'userId': userid,
             'botId': bot,

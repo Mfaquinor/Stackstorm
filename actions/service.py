@@ -8,6 +8,8 @@ CONNECTACHAT = 'https://localhost/api/v1/webhooks/oop/message'
 
 BASE_URL = ''
 
+AUTH='?st2-api-key='
+
 class SlackAction(Action):
 
     def run(self, **kwargs):
@@ -16,6 +18,7 @@ class SlackAction(Action):
         username = params['username']
         message = params['message']
         userid = params['userid']
+        token = params['token']
 
         key = 'attendance:' + userid
         attendance = self.action_service.get_value(key)
@@ -37,4 +40,4 @@ class SlackAction(Action):
             'userid': userid
         }
 
-        return requests.post(url=BASE_URL, headers=headers, data=json.dumps(payload))
+        return requests.post(url=BASE_URL + AUTH + token, headers=headers, data=json.dumps(payload), verify=False)

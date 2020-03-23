@@ -11,6 +11,6 @@ trigger:
 action:
     ref: harold.message
     parameters:
-        question: "{{trigger.body.text}}"
+        message: "{{trigger.body.message}}"
         username: "{{trigger.body.username}}"
         userid: "{{trigger.body.userid}}"

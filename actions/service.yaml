@@ -1,7 +1,7 @@
 name: service
 pack: harold
 runner_type: python-script
-description: Seleciona um atendente ou o harold para reposnder uma mensagem
+description: Seleciona um atendente ou o harold para responder uma mensagem
 enabled: true
 entry_point: service.py
 parameters:
@@ -20,3 +20,8 @@ parameters:
         description: O Id de identificação do usuário
         required: true
         position: 2
+    token:
+        type: string
+        description: Token de Autenticação
+        required: true
+        position: 3
